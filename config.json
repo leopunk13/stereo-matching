@@ -1,0 +1,36 @@
+{
+	"log": {
+		"access": "/var/log/v2ray/access.log",
+		"error": "/var/log/v2ray/error.log",
+		"loglevel": "warning"
+	},
+	"inbound": {
+		"port": 27499,
+		"protocol": "vmess",
+		"settings": {
+			"clients": [{
+				"id": "15d69819-f2f0-45dc-aa2d-d52fc66728fa",   
+				"alterId": 77  
+			}]
+        },
+        "streamSettings":{      
+            "network":"mkcp",
+            "kcpSettings":{
+              "mtu":1350,
+              "tti":20,
+              "uplinkCapacity":10,
+              "downlinkCapacity":100,
+              "congestion":false,
+              "readBufferSize":1,
+              "writeBufferSize":1,
+              "header":{
+                "type":"none"
+              }
+            }
+          }
+	},
+	"outbound": {
+		"protocol": "freedom",
+		"settings": {}
+	}
+}
